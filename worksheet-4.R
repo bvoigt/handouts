@@ -2,26 +2,26 @@
 
 counts_df <- data.frame(
   day = c("Monday", "Tuesday", "Wednesday"),
-  wolf = c(2, ...),
-  hare = ...,
-  ...
+  wolf = c(2, 1, 3),
+  hare = c(20, 25, 30),
+  fox = c(4, 4, 4)
 )
 
 ## Reshaping multiple columns in category/value pairs
 
 library(tidyr)
 counts_gather <- gather(counts_df,
-                        ...,
-                        ...,
-                        ...)
+                        key = 'species',
+                        value = 'count',
+                        wolf:fox)
 
 counts_spread <- spread(counts_gather,
-                        ...,
-                        ...)
+                        key = species,
+                        value = count)
 
 ## Exercise 1
 
-...
+counts_gather <- counts_gather[-1, -4 ,-7]
 
 ## Read comma-separated-value (CSV) files
 
