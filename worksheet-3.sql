@@ -1,8 +1,8 @@
 -- Exercise 2
 
-CREATE TABLE [%schema%.]%table% (
-  %column_name% %data_type% [%option% ...],
-    ...
+CREATE TABLE observers (
+  ID INTEGER NOT NULL PRIMARY KEY,
+  Name TEXT NOT NULL
 );
 
 -- Insert
